@@ -1,39 +1,35 @@
-@-webkit-keyframes spin {
+/*@-webkit-keyframes spin {
 from {
     -webkit-transform: rotate(0deg);
 }
 to {
     -webkit-transform: rotate(360deg);
     }
-}
+}*/
 
 body {
   background-color: black;
 }
 
 .spinbody {
-  height: 5%;
-  width: 100px;
+  width: 200px;
   background-color: black;
   margin: 300px auto;
-  -webkit-animation-name: spin;
+  /*-webkit-animation-name: spin;
   -webkit-animation-iteration-count: infinite;
   -webkit-animation-timing-function: linear;
-  -webkit-animation-duration: 1s;
+  -webkit-animation-duration: 1s;*/
 }
 
 .led {
   display: inline-block;
   position: relative;
-  height: 10px;
-  width: 10px;
-  border-radius: 2px;
+  height: 15px;
+  width: 15px;
+  border-radius: 10px;
   background: green;
 }
 
-.1 {
-  left:20px
-}
-.2 {
-  left:40px
+.a {
+  background: blue;
 }
