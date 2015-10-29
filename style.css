@@ -13,21 +13,22 @@ body {
 
 .spinbody {
   height: 5%;
-  width: 400px;
+  width: 100px;
   background-color: black;
   margin: 300px auto;
   -webkit-animation-name: spin;
   -webkit-animation-iteration-count: infinite;
   -webkit-animation-timing-function: linear;
-  -webkit-animation-duration: .24s;
+  -webkit-animation-duration: 1s;
 }
 
 .led {
   display: inline-block;
   position: relative;
-  height: 4px;
-  width: 4px;
-  background: red;
+  height: 10px;
+  width: 10px;
+  border-radius: 2px;
+  background: green;
 }
 
 .1 {
