@@ -1,0 +1,38 @@
+@-webkit-keyframes spin {
+from {
+    -webkit-transform: rotate(0deg);
+}
+to {
+    -webkit-transform: rotate(360deg);
+    }
+}
+
+body {
+  background-color: black;
+}
+
+.spinbody {
+  height: 5%;
+  width: 400px;
+  background-color: black;
+  margin: 300px auto;
+  -webkit-animation-name: spin;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-duration: .24s;
+}
+
+.led {
+  display: inline-block;
+  position: relative;
+  height: 4px;
+  width: 4px;
+  background: red;
+}
+
+.1 {
+  left:20px
+}
+.2 {
+  left:40px
+}
