@@ -2,33 +2,31 @@ var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 
 
-function draw() {
-  ctx.canvas.width  = window.innerWidth;
-  ctx.canvas.height = window.innerHeight;
+canvasWidth=500;
+canvasHeight=500;
+
+function setSeconds(sec) {
+  // Clear the canvas
+  ctx.clearRect(0, 0, canvasWidth, canvasHeight);
+  ctx.translate(canvasWidth/2, canvasWidth/2);
+  for (var x=1; x<=sec; x++){
+    ctx.rotate(Math.PI / 30);
+  }
+  ctx.translate(-canvasWidth/2, -canvasWidth/2);
+  ctx.fillStyle = "crimson";
+  ctx.fillRect(249, 0, 2, 250);
+  // ctx.save();
 }
 
 function rotate() {
-
-  canvasWidth=500;
-  canvasHeight=500;
-
-  // Clear the canvas
   ctx.clearRect(0, 0, canvasWidth, canvasHeight);
-
-  // Move registration point to the center of the canvas
   ctx.translate(canvasWidth/2, canvasWidth/2);
-
-  // Rotate 1 degree
   ctx.rotate(Math.PI / 30);
-
-  // Move registration point back to the top left corner of canvas
   ctx.translate(-canvasWidth/2, -canvasWidth/2);
-
-  ctx.fillStyle = "red";
-  ctx.fillRect(250, 249, 250, 2);
-  // ctx.fillStyle = "blue";
-  // ctx.fillRect(canvasWidth/4, canvasWidth/2, canvasWidth/2, canvasHeight/40);
-
+  ctx.fillStyle = "crimson";
+  ctx.fillRect(249, 0, 2, 250);
+  // ctx.save();
 }
-
-setInterval(rotate, 1000)
+var sec = 58;
+setSeconds(sec);
+setInterval(rotate, 1000);
