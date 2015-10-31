@@ -9,8 +9,8 @@ function draw() {
 
 function rotate() {
 
-  canvasWidth=800;
-  canvasHeight=300;
+  canvasWidth=500;
+  canvasHeight=500;
 
   // Clear the canvas
   ctx.clearRect(0, 0, canvasWidth, canvasHeight);
@@ -19,17 +19,16 @@ function rotate() {
   ctx.translate(canvasWidth/2, canvasWidth/2);
 
   // Rotate 1 degree
-  ctx.rotate(Math.PI / 180);
+  ctx.rotate(Math.PI / 30);
 
   // Move registration point back to the top left corner of canvas
   ctx.translate(-canvasWidth/2, -canvasWidth/2);
 
   ctx.fillStyle = "red";
-  ctx.fillRect(canvasWidth/4, canvasWidth/4, canvasWidth/2, canvasHeight/4);
-  ctx.fillStyle = "blue";
-  ctx.fillRect(canvasWidth/4, canvasWidth/2, canvasWidth/2, canvasHeight/4);
+  ctx.fillRect(250, 249, 250, 2);
+  // ctx.fillStyle = "blue";
+  // ctx.fillRect(canvasWidth/4, canvasWidth/2, canvasWidth/2, canvasHeight/40);
 
 }
 
-draw();
-setInterval(rotate, 1)
+setInterval(rotate, 1000)
