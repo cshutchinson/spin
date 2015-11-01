@@ -12,7 +12,7 @@ function setSeconds(sec) {
   }
   ctx.translate(-canvasWidth/2, -canvasWidth/2);
   ctx.fillStyle = "crimson";
-  ctx.fillRect(249, 0, 2, 250);
+  ctx.fillRect(249, 25, 2, 225);
   ctx.restore();
 }
 
@@ -23,7 +23,7 @@ function setMinutes(min) {
     ctx.rotate(Math.PI / 30);
   }
   ctx.translate(-canvasWidth/2, -canvasWidth/2);
-  ctx.fillStyle = "blue";
+  ctx.fillStyle = "black";
   ctx.fillRect(248, 25, 4, 225);
   ctx.restore();
 }
@@ -35,8 +35,16 @@ function setHours(hrs) {
     ctx.rotate(Math.PI / 6);
   }
   ctx.translate(-canvasWidth/2, -canvasWidth/2);
-  ctx.fillStyle = "blue";
-  ctx.fillRect(248, 75, 4, 175);
+  ctx.fillStyle = "black";
+  ctx.fillRect(248, 100, 4, 150);
+  ctx.restore();
+}
+
+function setup() {
+  ctx.save();
+  var img = new Image();
+  img.src = 'clock_skull_face.jpg';
+  ctx.drawImage(img,0,0);
   ctx.restore();
 }
 
@@ -52,9 +60,11 @@ function draw() {
   }
 
   ctx.clearRect(0, 0, canvasWidth, canvasHeight);
+  setup();
   setSeconds(sec);
   setMinutes(min);
   setHours(hrs);
+
 }
 
-setInterval(draw, 500);
+setInterval(draw, 100);
